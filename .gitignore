@@ -48,3 +48,40 @@ Thumbs.db
 *.mov
 *.wmv
 
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.dex
+*.class
+*.dex
+*.pro
+*.o
+*.so
+*.aar
+*.war
+*.ear
+
+# Gradle files
+.gradle/
+/build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio
+*.iml
+*.iws
+*.ipr
+
+# Logs and databases
+*.sqlite
+*.sqlite3
+*.hprof
+
+# OS-specific files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes

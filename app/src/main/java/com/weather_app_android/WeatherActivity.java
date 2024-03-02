@@ -1,9 +1,9 @@
-package com.example.assignment_5;
+package com.weather_app_android;
 
-import android.app.Application;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,16 +20,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
-import com.example.assignment_5.data.CityHistoryDatabase;
-import com.example.assignment_5.data.entities.CityHistory;
-import com.example.assignment_5.data.entities.CityHistoryDetails;
+import com.weather_app_android.data.CityHistoryDatabase;
+import com.weather_app_android.data.entities.CityHistory;
+import com.weather_app_android.data.entities.CityHistoryDetails;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherActivity extends AppCompatActivity {
@@ -91,9 +90,11 @@ public class WeatherActivity extends AppCompatActivity {
     }
 
     public void weather(){
+        String apiKey = getResources().getString(R.string.weatherstack_api_key);
         String url = "http://api.weatherstack.com/current" +
-                "?access_key=5cde0aaaa12917785c5036825e2a1266" +
+                "?access_key=" + apiKey +
                 "&query=" + cityName ;
+
         JSONObject jsonObject = new JSONObject();
 
         ImageView weatherIcon = findViewById(R.id.weatherIcon);
@@ -144,38 +145,7 @@ public class WeatherActivity extends AppCompatActivity {
                    //Database Update
                    addToCityHistory(cityN, temp, weatherDesc, windSpeed, windDir, preCip, humidity);
 
-                    //Toast.makeText(WeatherActivity.this , cityN + country, Toast.LENGTH_SHORT).show();
-
-
-/*
-                    JSONObject location =response.getJSONObject("location");
-                    cityN = location.getString("name");
-                    country = location.getString("country");
-
-                    JSONObject current = response.getJSONObject("current");
-                    temp = current.getInt("temperature");
-                    windSpeed = current.getInt("wind_speed");
-                    windDir = current.getString("wind_dir");
-                    preCip = current.getInt("precip");
-                    humidity = current.getInt("humidity");
-
-                    JSONArray weather_description = current.getJSONArray("weather_descriptions");
-                    weatherDesc = weather_description.getString(0);
-
-                    JSONArray weather_icons = current.getJSONArray("weather_icons");
-                    weatherIconUrl = weather_icons.getString(0);
-
-                    Glide.with(WeatherActivity.this).load(weatherIconUrl).into(weatherIcon);
-                    degree.setText(temp.toString()+"°");
-                    city.setText(cityN.toString() +", "+country);
-                    desc.setText(weatherDesc);
-                    wdir.setText("Wind Direction: " + windDir);
-                    wspeed.setText("Wind Speed: " + windSpeed.toString() +" km/h");
-                    pcip.setText("Precip: " + preCip.toString());
-                    hum.setText("Humidity: " + humidity.toString());
-*/
-
-
+                   Toast.makeText(WeatherActivity.this , cityN + country + " Weather Fetch Successfully.", Toast.LENGTH_SHORT).show();
                 }
                 catch (JSONException e) {
                     e.printStackTrace();

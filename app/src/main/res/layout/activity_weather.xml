@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WeatherActivity"
+    tools:context="com.weather_app_android.WeatherActivity"
     app:backgroundTint="@null"
     android:background="#1A232F">
 
@@ -118,10 +118,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button_squared"
+        android:fontFamily="@font/montserrat"
         android:text="Check History"
         android:textAllCaps="false"
         android:textColor="#FFFFFFFF"
-        android:textSize="12sp"
+        android:textSize="22sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

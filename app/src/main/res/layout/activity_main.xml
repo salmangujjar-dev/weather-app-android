@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".MainActivity"
+    tools:context="com.weather_app_android.MainActivity"
     android:backgroundTint="@null"
     android:background="#1A232F">
 
@@ -13,13 +13,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:textColorHint="@color/white"
+        android:colorAccent="@color/white"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:hintTextColor="@color/white"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxStrokeColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,6 +33,8 @@
             android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:maxLines="1"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat"
             android:id="@+id/cityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -44,6 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button_rounded"
+        android:fontFamily="@font/montserrat"
         android:text="Check Weather"
         android:textAllCaps="false"
         android:textColor="#FFFFFFFF"

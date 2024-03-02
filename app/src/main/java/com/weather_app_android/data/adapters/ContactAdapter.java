@@ -1,4 +1,4 @@
-package com.example.assignment_5.data.adapters;
+package com.weather_app_android.data.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.assignment_5.R;
-import com.example.assignment_5.data.entities.CityHistory;
+import com.weather_app_android.R;
+import com.weather_app_android.data.entities.CityHistory;
 
 import java.util.ArrayList;
 

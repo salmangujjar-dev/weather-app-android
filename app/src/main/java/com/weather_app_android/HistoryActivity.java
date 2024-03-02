@@ -1,26 +1,22 @@
-package com.example.assignment_5;
+package com.weather_app_android;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.assignment_5.data.adapters.ContactAdapter;
-import com.example.assignment_5.data.entities.CityHistory;
-import com.example.assignment_5.data.entities.CityHistoryDetails;
+import com.weather_app_android.data.adapters.ContactAdapter;
+import com.weather_app_android.data.entities.CityHistory;
+import com.weather_app_android.data.entities.CityHistoryDetails;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class HistoryActivity extends AppCompatActivity {

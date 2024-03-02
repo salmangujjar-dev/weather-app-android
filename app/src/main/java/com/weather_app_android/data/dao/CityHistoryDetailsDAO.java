@@ -1,13 +1,11 @@
-package com.example.assignment_5.data.dao;
+package com.weather_app_android.data.dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.assignment_5.data.entities.CityHistory;
-import com.example.assignment_5.data.entities.CityHistoryDetails;
+import com.weather_app_android.data.entities.CityHistoryDetails;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Dao

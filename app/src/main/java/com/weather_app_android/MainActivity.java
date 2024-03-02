@@ -1,4 +1,4 @@
-package com.example.assignment_5;
+package com.weather_app_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
-
 
 public class MainActivity extends AppCompatActivity {
 
