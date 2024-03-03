@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">weather_app_android</string>
     <string name="weatherstack_api_key">5cde0aaaa12917785c5036825e2a1266</string>
+    <string name="userName">salmangujjardev</string>
 </resources>

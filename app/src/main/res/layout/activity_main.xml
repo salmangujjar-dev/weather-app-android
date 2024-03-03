@@ -28,14 +28,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
+            android:id="@+id/cityNameAutoComplete"
             android:inputType="text"
             android:textColorHint="@color/white"
             android:textColor="@color/white"
             android:maxLines="1"
+            android:padding="15sp"
             android:textSize="20sp"
             android:fontFamily="@font/montserrat"
-            android:id="@+id/cityName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter City Name" />
